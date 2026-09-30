@@ -81,6 +81,35 @@
     padding: 56px 28px 28px;
     max-width: 1280px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .header-main { flex: 1 1 480px; min-width: 0; }
+  .header-contact {
+    flex: 0 0 auto;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    padding-top: 10px;
+  }
+  .header-contact .label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .header-contact a { color: var(--ink-soft); text-decoration: none; }
+  .header-contact a:hover { color: var(--accent); }
+  @media (max-width: 640px) {
+    .header-contact { text-align: left; flex-basis: 100%; padding-top: 0; }
   }
   .header h1 {
     font-family: var(--font-display);
@@ -500,9 +529,16 @@
 </div>
 
 <div class="header">
-  <h1>Inventory</h1>
-<p>A curated selection of Ronbow bathroom vanities, mirrors, sinks &amp; vessels, and countertops from previous collections — crafted to the same exacting standards as everything we make, available now in limited quantities.</p>
-  <div class="meta" id="updatedMeta">Loading availability…</div>
+  <div class="header-main">
+    <h1>Inventory</h1>
+    <p>A curated selection of Ronbow bathroom vanities, mirrors, sinks &amp; vessels, and countertops from previous collections &mdash; crafted to the same exacting standards as everything we make, available now in limited quantities.</p>
+    <div class="meta" id="updatedMeta">Loading availability…</div>
+  </div>
+  <div class="header-contact">
+    <div class="label">Livermore Showroom</div>
+    <div>7150 Patterson Pass Road, Suite F<br>Livermore, CA 94550</div>
+    <div><a href="mailto:contact@ronbow.com">contact@ronbow.com</a></div>
+  </div>
 </div>
 
 <div class="toolbar">
@@ -521,7 +557,7 @@
 <div class="empty" id="emptyState" hidden>No items match these filters.</div>
 
 <div class="footnote">
-  Stock figures reflect a static snapshot exported on 2026-09-23. This file does not auto-update — re-export and redeploy to publish new counts.
+  Stock figures reflect a static snapshot exported on 2026-09-29. This file does not auto-update — re-export and redeploy to publish new counts.
 </div>
 
 <script>
